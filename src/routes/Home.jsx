@@ -139,9 +139,9 @@ function Home() {
     })
   }
 
-  const downloadCanvas = function (tokenId) {
+  const downloadCanvas = function () {
     const link = document.createElement('a')
-    link.download = `${tokenId}.png`
+    link.download = `FrameIt.png`
     link.href = canvasRef.current.toDataURL()
     link.click()
     link.remove()
