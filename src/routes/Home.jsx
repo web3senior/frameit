@@ -4,6 +4,7 @@ import { useUpProvider } from '../contexts/UpProvider'
 import { PinataSDK } from 'pinata'
 import ABI from '../abi/test.json'
 import Frame from './../assets/frame.png'
+import Frame2 from './../assets/frame2.png'
 import Logo from '/logo.svg'
 import Web3 from 'web3'
 import styles from './Home.module.scss'
@@ -298,7 +299,7 @@ function Home() {
 
     const img = new Image()
     img.onload = function () {
-      ctx.drawImage(img, 155, 53, 467, 467)
+      ctx.drawImage(img, 293, 198, 180, 180) //   ctx.drawImage(img, 155, 53, 467, 467)
       toast.dismiss(t)
     }
     img.crossOrigin = `anonymous`
@@ -355,7 +356,7 @@ function Home() {
       ctx.drawImage(img, 0, 0, can.width, can.height)
     }
     img.crossOrigin = `anonymous`
-    img.src = Frame
+    img.src = Frame2
     //img.src = `https://api.universalprofile.cloud/image/bafybeifkvtmwqzjfpqjkd5jetjh7u7b6ixs36fwjvydne3s6sceduwn3g4?method=keccak256(bytes)&data=0xb6641e9cead9ce820a9fb1c3fa71fdfd4a45db431e1190b90fac71414dadb263&width=260`
   }, [])
 
