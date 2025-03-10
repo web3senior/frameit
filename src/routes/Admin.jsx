@@ -1,6 +1,6 @@
 import { useEffect, useState, Suspense, useRef } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
-import ABI from './../abi/Dracos.json'
+import ABI from './../abi/test.json'
 import Web3 from 'web3'
 import styles from './Admin.module.scss'
 

@@ -2,11 +2,10 @@ import { useState, useRef, useEffect } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { useUpProvider } from '../contexts/UpProvider'
 import { PinataSDK } from 'pinata'
-import ABI from '../abi/Dracos.json'
+import ABI from '../abi/test.json'
 import Frame from './../assets/frame.png'
-import Logo from './../../public/logo.svg'
+import Logo from '/logo.svg'
 import Web3 from 'web3'
-import Shimmer from './../helper/Shimmer'
 import styles from './Home.module.scss'
 import { useNavigate } from 'react-router'
 
@@ -84,10 +83,6 @@ function Home() {
   }
 
   const getTotalSupply = async () => await contractReadonly.methods.totalSupply().call()
-  const getMaxSupply = async () => await contractReadonly.methods.MAXSUPPLY().call()
-  const getMintPrice = async () => await contractReadonly.methods.mintPrice().call()
-  const getSwipePrice = async () => await contractReadonly.methods.swipePrice().call()
-  const getWhitelist = async (addr) => await contractReadonly.methods.getWhitelist(addr).call()
   const getSwipePool = async (tokenId) => await contractReadonly.methods.swipePool(tokenId).call()
 
   const fetchData = async (dataURL) => {
